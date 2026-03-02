@@ -1,3 +1,22 @@
-# create-cli: Scaffold a modern Node.js CLI
+# create-cli
 
-This is my template for making Node.js CLI. I prioritize modern libraries that offer speed, good TypeScript support, and sane default configurations.
+Scaffold a modern Node.js CLI app.
+
+## Usage
+
+```bash
+npx @haitrungle/create-cli <project-name>
+```
+
+Or just:
+
+```bash
+npx @haitrungle/create-cli
+```
+
+## Features
+
+- **TypeScript** with `tsdown` for fast builds
+- **Vitest** for testing
+- **Oxfmt** and **Oxlint** for formatting and linting
+- **Gunshi** for CLI framework

@@ -2,7 +2,6 @@ import { defineConfig } from "tsdown";
 
 export default defineConfig({
   entry: ["./src/index.ts"],
-  copy: [{ from: "./template", to: "./dist" }],
   format: ["esm"],
   target: "node20",
   clean: true,

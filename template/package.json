@@ -11,8 +11,7 @@
     "create-cli": "./dist/index.mjs"
   },
   "files": [
-    "dist",
-    "template"
+    "dist"
   ],
   "type": "module",
   "main": "./dist/index.mjs",
@@ -25,13 +24,10 @@
     "test": "vitest --run"
   },
   "dependencies": {
-    "gunshi": "^0.29.2",
-    "kolorist": "^1.8.0",
-    "prompts": "^2.4.2"
+    "gunshi": "^0.29.2"
   },
   "devDependencies": {
     "@types/node": "^25.3.3",
-    "@types/prompts": "^2.4.9",
     "@typescript/native-preview": "^7.0.0-dev.20260302.1",
     "oxfmt": "^0.36.0",
     "oxlint": "^1.51.0",
