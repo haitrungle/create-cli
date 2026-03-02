@@ -3,17 +3,31 @@
   "version": "0.0.1",
   "description": "Scaffold a modern Node.js CLI app",
   "keywords": [
-    "cli"
+    "cli",
+    "scaffold",
+    "generator",
+    "template",
+    "create-app"
   ],
   "license": "MIT",
   "author": "Hai Trung Le",
   "bin": {
-    "create-cli": "./dist/index.mjs"
+    "create-cli": "dist/index.mjs"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haitrungle/create-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/haitrungle/create-cli/issues"
+  },
+  "homepage": "https://github.com/haitrungle/create-cli#readme",
   "files": [
-    "dist",
-    "template"
+    "dist"
   ],
+  "engines": {
+    "node": ">=20"
+  },
   "type": "module",
   "main": "./dist/index.mjs",
   "scripts": {
@@ -22,7 +36,8 @@
     "fmt:check": "oxfmt --check",
     "lint": "oxlint",
     "lint:fix": "oxlint --fix",
-    "test": "vitest --run"
+    "test": "vitest --run",
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "gunshi": "^0.29.2",

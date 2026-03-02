@@ -54,13 +54,12 @@ export const app = define({
 
     // Determine template directory
     const __dirname = path.dirname(fileURLToPath(import.meta.url));
-    let templateDir = path.resolve(__dirname, "../template");
+    let templateDir = path.resolve(__dirname, "template");
 
     if (!fs.existsSync(templateDir)) {
       // Checking a few common locations.
       const candidates = [
-        path.resolve(__dirname, "../template"), // dist/../template or src/../template
-        path.resolve(__dirname, "../../template"), // if dist/src/..
+        path.resolve(__dirname, "../template"), // dist/template
         path.resolve(process.cwd(), "template"), // fallback for local dev
       ];
 
