@@ -9,10 +9,9 @@ import prompts from "prompts";
 export const app = define({
   name: "create-cli",
   description: "Scaffold a modern Node.js CLI app",
-  run: async () => {
+  run: async (ctx) => {
     const cwd = process.cwd();
-    // Basic argument handling - look for the first non-flag argument
-    let targetDir = process.argv.slice(2).find((arg) => !arg.startsWith("-"));
+    let targetDir = ctx.positionals[2];
 
     const defaultProjectName = "my-cli-app";
 
