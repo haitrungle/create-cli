@@ -1,6 +1,6 @@
 {
   "name": "@haitrungle/create-cli",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Scaffold a modern Node.js CLI app",
   "keywords": [
     "cli",
