@@ -52,10 +52,9 @@ describe("cli scaffolder", () => {
     // Spy on console.log
     const logSpy = vi.spyOn(console, "log").mockImplementation(() => {});
 
-    // Create gunshi command context, which mocks process.argv for us
+    // Create gunshi command context that provides a positional argument
     const ctx = await createCommandContext({
-      positionals: ["node", "create-cli", projectName],
-      argv: ["node", "create-cli", projectName],
+      positionals: [projectName],
     });
 
     await app.run(ctx);

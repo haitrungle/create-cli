@@ -11,7 +11,8 @@ export const app = define({
   description: "Scaffold a modern Node.js CLI app",
   run: async (ctx) => {
     const cwd = process.cwd();
-    let targetDir = ctx.positionals[2];
+    // `ctx.positionals` does not contain node binary and script name, unlike `process.argv`
+    let targetDir = ctx.positionals[0];
 
     const defaultProjectName = "my-cli-app";
 
