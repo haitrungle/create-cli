@@ -21,6 +21,7 @@ Then, refer to [gunshi docs](https://gunshi.dev/guide/essentials/getting-started
 ```ts
 import { define, cli } from "gunshi";
 
+// Define a subcommand
 const hello = define({
   name: "hello",
   description: "Say hello",
@@ -37,18 +38,20 @@ const hello = define({
   },
 });
 
+// Define the entry point
 const main = define({
-  name: "create-cli",
-  description: "Scaffold a modern Node.js CLI app",
+  name: "my-nice-cli",
+  description: "My little CLI app",
   run: () => {
-    console.log("Welcome to create-cli! Run with --help to see commands.");
+    console.log("Welcome to my-nice-cli! Run with --help to see commands.");
   },
 });
 
+// Wire up and start the CLI
 await cli(process.argv.slice(2), main, {
-  name: "create-cli",
+  name: "my-nice-cli",
   version: "0.0.1",
-  description: "Scaffold a modern Node.js CLI app",
+  description: "My little CLI app",
   subCommands: {
     hello,
   },
@@ -64,6 +67,6 @@ await cli(process.argv.slice(2), main, {
 - `@types/node`: type declarations for Node.js
 - `tsdown`: fast bundler that is both configurable and extensible
 
-The heaviest library here is `tsdown` at 26 MB. It is possible to omit `tsdown` if you use Node.js >=24 with type stripping, but you have to annotate all type imports with the `type` keyword and set `allowImportingTsExtensions` to true in "tsconfig.json". Then, remove `tsdown` and the `build` script from "package.json" and the file "tsdown.config.ts`, and you are good to go.
+The heaviest library here is `tsdown` at 26 MB. It is possible to omit `tsdown` if you use Node.js >=24 with type stripping, but you have to annotate all type imports with the `type` keyword and set `allowImportingTsExtensions` to true in "tsconfig.json". Then, remove `tsdown` and the `build` script from "package.json" and delete "tsdown.config.ts", and you are good to go.
 
-The second heaviest library here is `vitest` at 21 MB. I hear you; I don't like testing something that feels like an one-off script either. Still, most CLI tools I write are ran more than once anyways, and since they are the easiest kind of program to test, I bit the bullet and include it to make myself feel good. The fact that coding agents work best with tests to keep them in track is the cherry on top. However, you can also delete it just as easily as with `tsdown`, should you prefer.
+The second heaviest library here is `vitest` at 21 MB. I hear you: I don't like testing something that feels like an one-off script either. Still, most CLI tools I write are ran more than once anyways, and since they are the easiest kind of program to test, I bit the bullet and include it to make myself feel good. The fact that coding agents work best with tests to keep them in track is the cherry on top. However, you can also delete it just as easily as with `tsdown`, should you prefer.

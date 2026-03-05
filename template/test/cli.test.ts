@@ -6,7 +6,7 @@ import { hello } from "../src/commands/hello.js";
 describe("cli", () => {
   it("should be defined", () => {
     expect(app).toBeDefined();
-    expect(app.name).toBe("create-cli");
+    expect(app.name).toBe("my-cli");
   });
 
   it("should run main command", () => {

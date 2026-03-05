@@ -5,9 +5,9 @@ import { app } from "./cli.js";
 import { hello } from "./commands/hello.js";
 
 await cli(process.argv.slice(2), app, {
-  name: "create-cli",
+  name: "my-cli",
   version: "0.0.1",
-  description: "Scaffold a modern Node.js CLI app",
+  description: "My little CLI app",
   subCommands: {
     hello,
   },

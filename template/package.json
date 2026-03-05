@@ -1,18 +1,9 @@
 {
-  "name": "@haitrungle/create-cli",
+  "name": "my-cli",
   "version": "0.0.1",
-  "description": "Scaffold a modern Node.js CLI app",
-  "keywords": [
-    "cli"
-  ],
-  "license": "ISC",
-  "author": "Hai Trung Le",
-  "bin": {
-    "create-cli": "./dist/index.mjs"
-  },
-  "files": [
-    "dist"
-  ],
+  "description": "My little CLI app",
+  "license": "MIT",
+  "author": "",
   "type": "module",
   "main": "./dist/index.mjs",
   "scripts": {
@@ -31,7 +22,7 @@
     "@typescript/native-preview": "^7.0.0-dev.20260302.1",
     "oxfmt": "^0.36.0",
     "oxlint": "^1.51.0",
-    "tsdown": "^0.21.0-beta.2",
+    "tsdown": "^0.21.0",
     "vitest": "^4.0.18"
   }
 }
